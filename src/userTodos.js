@@ -1,14 +1,23 @@
-export const userTodos = [
-    {name: "Teste 0",},
-    {name: "Teste 1",},
-    {name: "Teste 2",},
-    {name: "Teste 3",},
+const userTodos = [
+    {
+        name: "1"
+    },
+    {
+        name: "2",
+    },
+    {
+        name: "3",
+    },
+    {
+        name: "3",
+    },
 ]
+localStorage.setItem('todos',JSON.stringify(userTodos));
+export const storedTodos= JSON.parse(localStorage.getItem('todos'));
 
-export function addTodo(index){
-    userProjects.push(`Teste ${index}`)
-}
-
+export function addTodo(){
+    storedTodos.push({name: "5"})
+};
 export function removeTodo(index){
-    delete userProjects[index]
-}
+   delete userTodos[index]
+};
